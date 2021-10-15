@@ -29,6 +29,12 @@ public class Main {
         System.out.println(teuerste_combo(tast,usb,budget));
     }
 
+    /**
+     *
+     * @param tast array cu preturi (int)
+     * @return min dintr-un array primit ca parametru
+     */
+
     public static int billigste(int[] tast){
         int min = Integer.MAX_VALUE;
         for(int i=0; i<tast.length; i++){
@@ -36,6 +42,13 @@ public class Main {
         }
         return min;
     }
+
+    /**
+     *
+     * @param tast array cu preturi (int)
+     * @param usb array cu preturi (int)
+     * @return max dintre doua array-uri primit ca parametru
+     */
 
     public static int teuerste(int[] tast, int[] usb){
         int max = Integer.MIN_VALUE;
@@ -47,6 +60,13 @@ public class Main {
         }
         return max;
     }
+
+    /**
+     *
+     * @param usb array cu preturi (int)
+     * @param budget o valoare integer care reprezinta un buget maxim
+     * @return max dintr-un array primit ca parametru, max sa fie mai mic decat un buget
+     */
 
     public static int teuerste_budget(int[] usb, int budget){
         int max = Integer.MIN_VALUE;
@@ -60,6 +80,14 @@ public class Main {
         if (change == 0) return -1;
         return max;
     }
+
+    /**
+     *
+     * @param tast array de preturi
+     * @param usb array de preturi
+     * @param budget o valoare integer care reprezinta un buget maxim
+     * @return      * suma maxima dintre doua elemente din doua array-uri, suma sa fie mai mica sau egal cu un buget
+     */
 
     public static int teuerste_combo(int[] tast, int[] usb, int budget){
         int sum_max = 0;
